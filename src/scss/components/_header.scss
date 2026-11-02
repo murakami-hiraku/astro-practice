@@ -1,9 +1,18 @@
 @use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
 
 header {
   padding: 20px 40px;
   background: $color-main;
   color: $color-text;
+
+  @include mq(md) {
+    padding: 20px;
+  }
+
+  @include mq(sm) {
+    padding: 16px;
+  }
 
   .header-inner {
     display: flex;

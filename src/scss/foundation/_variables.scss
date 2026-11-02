@@ -1,4 +1,13 @@
+// Color
 $color-main: #333;
 $color-text: #fff;
 
+// Layout
 $container-width: 1200px;
+
+// Breakpoints
+$breakpoints: (
+  lg: 1200px,
+  md: 1024px,
+  sm: 767px,
+);
