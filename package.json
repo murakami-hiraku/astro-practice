@@ -12,7 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.4",
-    "sass": "^1.107.0"
+    "astro": "^7.4.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "sass": "^1.107.1"
   }
 }
