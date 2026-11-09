@@ -4,17 +4,33 @@ interface Props {
 }
 
 const { siteName = "Astro Practice" } = Astro.props;
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header>
   <div class="header-inner">
-    <a href="/" class="logo">{siteName}</a>
+    <a href="/" class="logo">
+      {siteName}
+    </a>
     <nav>
       <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="/blog">BLOG</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <li>
+          <a href="/" class={currentPath === "/" ? "is-active" : ""}>
+            HOME
+          </a>
+        </li>
+        <li>
+          <a href="/about" class={currentPath === "/about" ? "is-active" : ""}>
+            ABOUT
+          </a>
+        </li>
+        <li>
+          <a href="/blog">BLOG</a>
+        </li>
+        <li>
+          <a href="/contact">CONTACT</a>
+        </li>
       </ul>
     </nav>
   </div>

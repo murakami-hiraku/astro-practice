@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/layout.astro";
+import Button from "../components/Button.astro";
 
 const title = "Astro 練習";
 const message = "Astroの学習中";
@@ -12,5 +13,8 @@ const message = "Astroの学習中";
 
     <h2>タイトル</h2>
     <p>テキストテキスト</p>
+
+    <Button text="詳しく見る" href="/about" />
+    <Button text="お問い合わせ" href="/contact" variant="outline" />
   </section>
 </Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/layout.astro";
+
+const title = "ABOUT";
+const description = "私たちについて";
+---
+
+<Layout title="ABOUT | My Portfolio" description={description}>
+  <section class="about">
+    <div class="about__inner">
+      <h1>{title}</h1>
+      <p>{description}</p>
+
+      <div class="about__content">
+        <h2>このサイトについて</h2>
+        <p>
+          このサイトはAstroを使って制作したWebサイトです。
+          コンポーネントやレイアウトを活用しながら、
+          実践的なWeb制作を学んでいます。
+        </p>
+      </div>
+
+      <div class="about__mission">
+        <h2>MISSION</h2>
+        <p>Web制作の可能性を広げる。</p>
+      </div>
+    </div>
+  </section>
+</Layout>

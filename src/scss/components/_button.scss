@@ -1,0 +1,20 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &--primary {
+    background: #263c50;
+    color: #fff;
+  }
+
+  &--outline {
+    border: 1px solid #263c50;
+    color: #263c50;
+    background: transparent;
+  }
+}
