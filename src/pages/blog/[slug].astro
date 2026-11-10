@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/layout.astro";
+import { posts } from "../../data/posts.js";
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+    props: {
+      post: post,
+    },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout title={`${post.title} | My Portfolio`}>
+  <article>
+    <p>{post.date}</p>
+    <span>{post.category}</span>
+    <h1>{post.title}</h1>
+    <p>{post.description}</p>
+  </article>
+</Layout>

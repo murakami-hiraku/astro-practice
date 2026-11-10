@@ -1,26 +1,6 @@
 ---
 import Layout from "../layouts/layout.astro";
-
-const posts = [
-  {
-    title: "Astroを学び始めました",
-    date: "2026.11.09",
-    category: "学習記録",
-    description: "Astroの基本を学びながら、サイト制作に挑戦しています。",
-  },
-  {
-    title: "コンポーネントを使ってみよう",
-    date: "2026.11.10",
-    category: "コーディング",
-    description: "共通パーツを部品化して、効率よくサイトを作る方法を学びます。",
-  },
-  {
-    title: "これからのWeb制作について",
-    date: "2026.11.11",
-    category: "Web制作",
-    description: "AstroやヘッドレスCMSを活用したWeb制作を考えてみます。",
-  },
-];
+import { posts } from "../data/posts.js";
 ---
 
 <Layout title="BLOG | My Portfolio" description="ブログ記事一覧です。">
@@ -29,14 +9,18 @@ const posts = [
     <p>ブログ記事一覧</p>
 
     <div class="blog-list">
-      {posts.map((post) => (
-        <article class="blog-card">
-          <p>{post.date}</p>
-          <span>{post.category}</span>
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-        </article>
-      ))}
+      {
+        posts.map((post) => (
+          <article class="blog-card">
+            <p>{post.date}</p>
+            <span>{post.category}</span>
+            <h2>
+              <a href={`/blog/${post.slug}`}>{post.title}</a>
+            </h2>
+            <p>{post.description}</p>
+          </article>
+        ))
+      }
     </div>
   </section>
 </Layout>
